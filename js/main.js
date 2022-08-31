@@ -8,11 +8,11 @@ let currentState = true
 
 // Toggle none for erorror window
 function state (state) {
-  let errorWindow = document.getElementById('errorWindow')
-  if(errorWindow.style.display === "none") {
-    errorWindow.style.display = 'block'
+  let errorBtn = document.getElementById('reload')
+  if(errorBtn.style.display === "none") {
+    errorBtn.style.display = 'block'
   } else {
-     errorWindow.style.display = 'none'
+     errorBtn.style.display = 'none'
   }
 } 
 state(currentState)
@@ -98,9 +98,12 @@ async function getFetch(){
       
 
       if(failedUserPokemon === "harman"){
-        document.getElementById('errorMessage').innerText = `${capitalized(failedUserPokemon) } is outside twerking please go catch him`
+        document.getElementById('userPokemon').innerText = `${capitalized(failedUserPokemon) }`
+        document.getElementById('type').innerHTML = `  is outside twerking please go catch him`
       } else {
-        document.getElementById('errorMessage').innerText = `${capitalized(failedUserPokemon)} is not in your Pokedex`
+        document.getElementById('userPokemon').innerText = `${capitalized(failedUserPokemon)}`
+        document.getElementById('type').innerHTML = `Not in your Pokedex!`
+        document.getElementById('pokemonArtWork').src = `./images/unknown.png`
       }
 
       console.log(error)
