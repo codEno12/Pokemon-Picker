@@ -1,0 +1,88 @@
+
+
+
+
+
+.hidden{
+    display: none;
+}
+
+main {
+    background: url('../images/bakcground.png');
+    background-size: cover;
+    height: 100vh;
+
+}
+.subsection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button {
+    background: linear-gradient();
+    border: none;
+    padding: 0.5rem;
+    border-radius: 100px;
+    font-size: 1rem; 
+    margin-left: 1rem;
+    font-family: 'Gloria Hallelujah', Arial, Helvetica, sans-serif;
+}
+
+.textbox {
+    border-radius: 100px;
+    border: none;
+
+}
+
+
+.pokemonlogo { 
+    max-width: 600px;
+}
+
+.pokemonInfo {
+    display: flex;
+}
+.main-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(2, 2, 2, 0.197);
+    width: 400px;
+    height: 500px;
+    border-radius: 100px;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+h2 {
+    font-family: 'Luckiest Guy', Arial, Helvetica, sans-serif; 
+    font-size: 5rem;
+    color: white;
+
+}
+
+ul, p {
+    font-family: 'Gloria Hallelujah', Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.pokemon-type-icon {
+    margin-top: -3rem;
+}
+
+.button-setting {
+     display: flex;
+     flex-direction: row;
+     align-self: center;
+}
+
+.pokemon-art {
+    width: 500px;
+    height: 550px;
+}
