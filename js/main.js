@@ -81,11 +81,7 @@ async function getFetch(){
       
 
   } catch(error) {
-
-    // I need a div that is initially hidden 
-       // error occurs => div visible with contents 
-       // contents: display error message / reload buton / unknown pictures 
-      
+  
         const failedUserPokemon =  document.getElementById('pokemonName').value.toLowerCase()
 
         document.getElementById('pokemonArtWork').src = `./images/unknown.png`
