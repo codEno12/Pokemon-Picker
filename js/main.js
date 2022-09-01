@@ -7,15 +7,15 @@ document.getElementById('choosePokemon').addEventListener('click', getFetch)
 let currentState = true
 
 // Toggle none for erorror window
-function state (state) {
-  let errorBtn = document.getElementById('reload')
-  if(errorBtn.style.display === "none") {
-    errorBtn.style.display = 'block'
-  } else {
-     errorBtn.style.display = 'none'
-  }
-} 
-state(currentState)
+// function state (state) {
+//   let errorBtn = document.getElementById('reload')
+//   if(errorBtn.style.display === "none") {
+//     errorBtn.style.display = 'block'
+//   } else {
+//      errorBtn.style.display = 'none'
+//   }
+// } 
+// state(currentState)
 
 
 // Abilitiy Maker Function
@@ -24,7 +24,6 @@ function abilityListMaker(skillsData){
   let ul = document.getElementById('abilities')
   ul.innerText = ""
     for(let i = 0; i < abilitiesArr.length; i++){
-      console.log(abilitiesArr[i].name)
       let li = document.createElement('li')
       ul.appendChild(li).innerText = `Ability ${i+1}: ${capitalized(abilitiesArr[i].ability.name)}`
       }
@@ -86,26 +85,15 @@ async function getFetch(){
     // I need a div that is initially hidden 
        // error occurs => div visible with contents 
        // contents: display error message / reload buton / unknown pictures 
-
-      state(currentState)
-      let reloadBtn = document.getElementById('reload')
-      reloadBtn.addEventListener('click', () => {
-        location.reload()
-      } )
       
-      const failedUserPokemon =  document.getElementById('pokemonName').value.toLowerCase()
+        const failedUserPokemon =  document.getElementById('pokemonName').value.toLowerCase()
 
-      
-
-      if(failedUserPokemon === "harman"){
-        document.getElementById('userPokemon').innerText = `${capitalized(failedUserPokemon) }`
-        document.getElementById('type').innerHTML = `  is outside twerking please go catch him`
-      } else {
-        document.getElementById('userPokemon').innerText = `${capitalized(failedUserPokemon)}`
-        document.getElementById('type').innerHTML = `Not in your Pokedex!`
         document.getElementById('pokemonArtWork').src = `./images/unknown.png`
-      }
+        document.getElementById('type').innerHTML = `Not in your Pokedex!`
+        document.getElementById('userPokemon').innerText = `${capitalized(failedUserPokemon)}`
 
+        document.getElementById('pokemonType').src = ""
+         document.getElementById('abilities').innerHTML = ""
       console.log(error)
   }
 }
